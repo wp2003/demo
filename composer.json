@@ -1,0 +1,14 @@
+{
+    "name": "wp2003/demo",
+    "description": "a first demo from wangpei",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wangpei",
+            "email": "wp2003@sohu.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
