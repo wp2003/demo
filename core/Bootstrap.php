@@ -8,6 +8,7 @@ class Bootstrap
 		//dump("boot running ...<br>");
 		//dump(file_get_contents("php://input"));
 		//$query = $parse_url($_SERVER['REQUEST_URI']); 
+		session_start();
 		self::parseUrl();
 	}
 

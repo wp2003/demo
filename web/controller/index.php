@@ -2,6 +2,7 @@
 namespace web\controller;
 
 use core\View;
+use Gregwar\Captcha\CaptchaBuilder;
 
 class Index
 {
@@ -15,8 +16,16 @@ class Index
 		//调用视图模板
 		return $this->view->make('show')->with('version','version:1.0 copyright@2018');
 	}
-	public function post()
+	public function login()
 	{
-		dump("index posting ...");
+		return $this->view->make('login');
+	}
+	public function code()
+	{
+		$builder = new CaptchaBuilder;
+		$builder->build(100, 30);
+		$_SESSION['phrase'] = $builder->getPhrase();
+		header('Content-type: image/jpeg');
+		$builder->output();
 	}
 }
